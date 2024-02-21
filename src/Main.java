@@ -19,15 +19,25 @@ public class Main {
         //must be next else it skips the input
         String genre = input.next();
 
-        //testing object for input (del 1)
+        //testing object for input
         Movie movieOne = new Movie(title, director, yearCreated,
                 isInColor, lengthInMinuts, genre);
+//
+//
+        //testing for output of the objects getters
+//        System.out.println(movieOne.getTitle() + "\n" + movieOne.getDirector() + "\n" +
+//                movieOne.getYearCreated() + "\n" + movieOne.getIsinColor() + "\n" +
+//                 movieOne.getLengthInMinuts() + "\n" + movieOne.getGenre());
 
+        //testing the MovieCollection class for the addMovie method
+        MovieCollection movieList = new MovieCollection();
+        //adding the movieOne to the list
+        movieList.addMovie(movieOne);
+        //receive the movieList getter and storing it in a Movie class array
+        Movie[] listFirstMovie = movieList.getMovieCollection();
+        //output the array with the first movie attributes with index 0 (movieOne)
+        System.out.println(listFirstMovie[0].getTitle());
 
-        //testing for output of the objects getters (del 1)
-        System.out.println(movieOne.getTitle() + "\n" + movieOne.getDirector() + "\n" +
-                movieOne.getYearCreated() + "\n" + movieOne.getIsinColor() + "\n" +
-                 movieOne.getLengthInMinuts() + "\n" + movieOne.getGenre());
     }
 
 
